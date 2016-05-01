@@ -60,7 +60,6 @@ public class Game {
 				p.sendMessage("A partida iniciou!");
 				p.setLevel(0);
 				p.teleport(arena.getSpawn());
-				p.getInventory().setChestplate(new ItemStack(Material.ELYTRA));
 				addScoreboard(p);
 			}
 		}
