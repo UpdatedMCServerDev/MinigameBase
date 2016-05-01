@@ -1,0 +1,10 @@
+name: MinigameBase
+main: me.gET.sv.MinigameBase.main.Main
+version: 1.0
+
+depend: [LocationsHolder]
+
+commands:
+   elytra:
+      usage: /base
+
