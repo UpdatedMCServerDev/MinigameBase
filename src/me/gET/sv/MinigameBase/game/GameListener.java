@@ -14,27 +14,6 @@ import me.gET.sv.MinigameBase.main.Arena;
 public class GameListener implements Listener {
 
 	@EventHandler
-	public void onPlayerDamage(EntityDamageEvent e){
-		if(e.getEntityType() != EntityType.PLAYER) return;
-		if(Arena.getArena((Player) e.getEntity()) == null) return;
-		Player p = (Player) e.getEntity();
-		
-		if(e.getCause() == DamageCause.ENTITY_ATTACK){
-			p.teleport(Arena.getArena(p).getSpawn());
-			e.setCancelled(true);
-		}
-		
-		if(e.getCause() == DamageCause.FALL){
-			p.setVelocity(new Vector(0, 5, 0));
-			e.setCancelled(true);
-		}
-		else{
-			return;
-		}
-		
-	}
-	
-	@EventHandler
 	public void onPlayerLeave(PlayerQuitEvent e){
 		if(Arena.getArena(e.getPlayer()) != null){
 			Arena.getArena(e.getPlayer()).removePlayer(e.getPlayer());
