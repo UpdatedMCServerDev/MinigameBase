@@ -1,2 +1,2 @@
-# Variables
-Variables
+# MinigameBase
+A minigame Base
